@@ -1,37 +1,76 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Genzteched</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SAMARA</title>
+    
+    <!-- Style CSS eksternal -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/aa9a0b170b.js" crossorigin="anonymous"></script>
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
 
 </head>
 <body>
-  <!-- Navbar -->
-  <nav >
-    <div class="logo" data-aos="fade-down">Genzteched</div>
-    <div class="menu-toggle" id="menu-toggle" data-aos="fade-down">&#9776;</div>
-    <ul id="nav-links" data-aos="" >
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+    <nav class="navbar" data-aos="fade-down" data-aos-duration="800">
+        <div class="content">
+            <div class="logo"><a href="#">SAMARA</a></div>
+                <ul class="menu-list">
+                    <div class="icon cancel-btn">
+                        <i class="fa-solid fa-times"></i>
+                    </div>
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-solid fa-house"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-user"></i> About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-blog"></i> Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
 
-  <script src="script.js"></script>
+            <div class="icon menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+<section class="hero">
+  <div class="hero-left" data-aos="fade-right" data-aos-duration="1200">
+    <h1>Sahabat Alam dan Manusia<br><span>Ramah Lingkungan</span></h1>
+    <button class="cta-button">Pelajari Lebih Lanjut</button>
+  </div>
+  <div class="hero-right" data-aos="fade-left" data-aos-duration="1200" data-aos-parallax="true">
+    <img src="nature-illustration.png" alt="Ilustrasi Alam">
+  </div>
+</section>
+
+
+    
+
     <!-- AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1200, // Durasi animasi (ms)
-    offset: 100,    // Jarak scroll trigger
-    once: true      // Animasi hanya sekali
-  });
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
+<script src="script.js"></script>
 </body>
 </html>

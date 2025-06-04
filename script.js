@@ -1,23 +1,38 @@
-const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.getElementById('nav-links');
 
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  menuToggle.innerHTML = navLinks.classList.contains('active') ? '&times;' : '&#9776;';
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false,
+        });
 
-function toggleAOS() {
-  const navLinks = document.getElementById('nav-links');
-  if (window.innerWidth <= 768) {
-    navLinks.removeAttribute('data-aos');
-  } else {
-    navLinks.setAttribute('data-aos', 'fade-down');
-  }
-}
+        const navbar = document.querySelector(".navbar");
+        const menu = document.querySelector(".menu-list");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
 
-// Jalankan saat pertama kali load
-toggleAOS();
+        menuBtn.onclick = () => {
+            menu.classList.add("active");
+            menuBtn.classList.add("hide");
+        };
 
-// Jalankan saat window di-resize
-window.addEventListener('resize', toggleAOS);
+        cancelBtn.onclick = () => {
+            menu.classList.remove("active");
+            menuBtn.classList.remove("hide");
+        };
 
-});
+        // Tutup menu jika klik di luar menu saat mode responsif aktif
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = menu.contains(event.target);
+            const isClickOnMenuBtn = menuBtn.contains(event.target);
+
+            if (!isClickInsideMenu && !isClickOnMenuBtn && menu.classList.contains('active')) {
+                menu.classList.remove('active');
+                menuBtn.classList.remove('hide');
+            }
+        });
+
+        // Optional: navbar sticky saat scroll
+        // window.onscroll = () => {
+        //     window.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        // };
