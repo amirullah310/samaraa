@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genzteched</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+  <!-- Navbar -->
+  <nav >
+    <div class="logo" data-aos="fade-down">Genzteched</div>
+    <div class="menu-toggle" id="menu-toggle" data-aos="fade-down">&#9776;</div>
+    <ul id="nav-links" data-aos="" >
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script src="script.js"></script>
+    <!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1200, // Durasi animasi (ms)
+    offset: 100,    // Jarak scroll trigger
+    once: true      // Animasi hanya sekali
+  });
+</script>
+
+</body>
+</html>
