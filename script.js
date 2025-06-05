@@ -37,17 +37,19 @@
         //     window.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
         // };
     // Loader fade out after minimal 1 second
-    window.addEventListener('load', () => {
-      const loader = document.querySelector('.loader');
-      if (loader) {
-        setTimeout(() => {
-          loader.style.opacity = '0';
-          setTimeout(() => {
-            loader.style.display = 'none';
-          }, 500); // fade out 0.5s
-        }, 1000); // minimal 1 detik tampil loading
-      }
-    });
+window.addEventListener('load', () => {
+  const loader = document.querySelector('.loader');
+  if (loader) {
+    setTimeout(() => {
+      loader.style.opacity = '0';
+      setTimeout(() => {
+        loader.style.display = 'none';
+        document.body.classList.remove('loading');
+      }, 500); // fade out 0.5s
+    }, 1000); // minimal 1 detik tampil loading
+  }
+});
+
 
 const fallingLeavesContainer = document.querySelector('.falling-leaves');
 
