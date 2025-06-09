@@ -799,3 +799,111 @@ body.loading {
   }
 }
 
+#backToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #2e8b57; /* warna hijau */
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  z-index: 1000;
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#backToTop:hover {
+  background-color: #246b45;
+}
+
+
+footer {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.footer-container {
+  background-color: #ffffff;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-section h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2c5d3f;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #2c5d3f;
+}
+
+.footer-section ul li i {
+  margin-right: 8px;
+  color: #2c5d3f;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #333;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #2c5d3f;
+}
+
+.footer-bottom {
+  background-color: #f2f2f2; /* abu-abu pudar */
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 14px;
+  color: #555;
+}
