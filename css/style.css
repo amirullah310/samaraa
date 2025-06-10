@@ -379,7 +379,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #27ae60;
+  background-color: #fff;
   border-radius: 50%;
 }
 
@@ -608,7 +608,7 @@
             width: 80%;
             max-width: 300px;
             height: 100vh;
-            background: rgba(5, 168, 19, 0.95);
+            background-color: #2e7d32f6;
             backdrop-filter: blur(10px);
             padding-top: 80px; /* extra padding to accommodate logo + space */
             display: block;

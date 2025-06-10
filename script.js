@@ -93,3 +93,30 @@ backToTopButton.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+// Image Modal functionality
+const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImage');
+const closeBtn = document.getElementsByClassName('modal-close')[0];
+
+// Get all profile images
+const profileImages = document.querySelectorAll('.dev-card img');
+
+// Add click event to all profile images
+profileImages.forEach(img => {
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    }
+});
+
+// Close modal when clicking (X)
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
