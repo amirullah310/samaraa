@@ -517,7 +517,7 @@ body {
 }
 
 .contact-form button:hover {
-  background-color: #0056b3;
+  background-color: #38a869;
 }
 
 /* Responsive Breakpoints */
@@ -1026,7 +1026,7 @@ body.loading {
 }
 
 .dev-card .social-links a:hover {
-  background: #0056b3;
+  background: #37a768;
 }
 
 /* Responsive */
@@ -1078,7 +1078,7 @@ body.loading {
 }
 
 .dev-card .contact-button:hover {
-  background: #0056b3;
+  background: #35a063;
 }
 
 #backToTop {

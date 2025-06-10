@@ -120,3 +120,50 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+  const form = document.querySelector("#contactForm form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Mencegah reload default form
+
+    const formData = new FormData(form);
+
+    Swal.fire({
+      title: 'Mengirim...',
+      allowOutsideClick: false,
+      didOpen: () => {
+        Swal.showLoading();
+      }
+    });
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Terima kasih!',
+          text: 'Pesan Anda berhasil dikirim.',
+          confirmButtonColor: getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim() || '#3085d6'
+        });
+        form.reset();
+      } else {
+        throw new Error("Form submission failed");
+      }
+    })
+    .catch(error => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops!',
+        text: 'Terjadi kesalahan saat mengirim pesan. Silakan coba lagi.',
+        confirmButtonColor: '#e53e3e'
+      });
+    });
+  });
+
